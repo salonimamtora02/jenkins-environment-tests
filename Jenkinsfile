@@ -1,11 +1,15 @@
 pipeline {
     agent any
-
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello World12345'
-                echo "Hello"
+                script {
+                    if (env.BRANCH_NAME == 'main') {
+                        echo 'Hello from main branch'
+                    }  else {
+                        sh "echo 'Hello from ${env.BRANCH_NAME} branch!'"
+                    }
+                    }
             }
         }
     }
