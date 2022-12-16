@@ -6,7 +6,6 @@ pipeline {
             steps {
                 echo 'Hello World12345'
                 echo "Hello"
-                echo "$test"
             }
         }
     }
