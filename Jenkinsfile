@@ -17,7 +17,7 @@ pipeline {
         stage('stage-2') {
             steps {
                 script {
-                    if (env.BRANCH_NAME == 'main' && 'dev') {
+                    if (env.BRANCH_NAME == 'main') {
                        sh "echo ("Region is =$Region1")"
                     } else {
                         sh "echo (Region is =$Region2)"
