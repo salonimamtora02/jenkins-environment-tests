@@ -11,7 +11,7 @@ pipeline {
             steps {
                 script {
                     if (env.BRANCH_NAME == 'main') {
-                        echo 'Hello from main branch $Test'
+                        sh "echo 'Hello from main branch $Test'"
                     }  else {
                         sh "echo 'Hello Region is := $Region1'"
                     }
