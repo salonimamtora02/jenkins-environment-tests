@@ -7,6 +7,7 @@ pipeline {
                 script {
                     withEnv(readFile('env.' + env.BRANCH_NAME + '.txt').split('\n') as List) {
                         sh "echo ${REGION}"
+                        sh "echo ${distibution_id}"
                     }
 
                  }
